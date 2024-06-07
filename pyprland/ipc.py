@@ -107,8 +107,10 @@ async def hyprctl_json(command: str, logger: Logger | None = None) -> JSONRespon
     if cache_data:
         cache_data.set_value(ret)
     return ret
-
-
+    
+async def hyprctlJSON(command:str, logger: Logger | None = None):
+    """Function with old name for backwards compatibility"""
+    return await hyprctl_json(command, logger)
 # }}}
 
 
